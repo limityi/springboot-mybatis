@@ -1,16 +1,14 @@
 package com.spring.boot.entity;
 
-import javax.persistence.Column;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.util.Date;
 
 /**
  * 信用卡实体
  * Created by XiongYi on 2018/06/25.
  */
-@Table
+@Entity
+@Table(name="credit_card")
 public class CreditCard {
 
     @Id

@@ -6,7 +6,8 @@ import javax.persistence.*;
  * 客户实体
  * Created by XiongYi on 2018/06/25.
  */
-@Table
+@Entity
+@Table(name="customer")
 @Access(value = AccessType.FIELD)
 public class Customer {
 

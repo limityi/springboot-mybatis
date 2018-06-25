@@ -1,12 +1,19 @@
+#spring数据源配置
 spring:
   datasource:
     password: root
     driver-class-name: com.mysql.jdbc.Driver
     url: jdbc:mysql://localhost/springboot?useSSL=false
     username: root
+  jpa:
+    database: mysql
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: true
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+#mybatis配置
 mybatis:
   executor-type: simple
   mapper-locations: classpath:/mybatis/mappers/*.xml
-  config-location: classpath:/mybatis/mybatis-config.xml
   type-aliases-package: com.spring.boot.mybatis.entity
   check-config-location: true
