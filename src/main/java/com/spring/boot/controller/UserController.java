@@ -9,6 +9,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Random;
 
 @RestController
@@ -22,6 +24,9 @@ public class UserController {
 
     @GetMapping(value = "/user/{id}")
     public com.spring.boot.mybatis.entity.User user(@PathVariable Integer id){
+        Map<String,String> map=new HashMap<String,String>();
+        map.putIfAbsent("1","1");
+
         return userMapper.selectByPrimaryKey(id);
     }
 
